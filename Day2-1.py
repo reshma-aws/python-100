@@ -1,4 +1,7 @@
 #To show how prints with different data types
+from hashlib import new
+
+
 print("Hello")
 
 print (12345) #prints as is 
@@ -11,3 +14,11 @@ print(123_345_567) #the "_" is used to make a large number readable. However the
 
 street_name = "Abbey Road"
 print(street_name[4] + street_name[7])
+
+num_char = len(input("What is your name : ? "))
+# print("Your name has " + num_char + "characters.")   --> this line will throw the error TypeError: can only concatenate str (not "int") to str
+# so you have to do type casting or type conversion
+
+new_num_char = str(num_char)
+print(type(num_char))
+print("Your name has " + new_num_char + " characters.")
